@@ -5,7 +5,7 @@ import Home from '../views/Home.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/login'
   },
   {
     path: '/home',
@@ -14,7 +14,22 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/message/:id',
-    component: () => import('../views/ViewMessage.vue')
+    component: () => import('../views/ViewMessage.vue')  
+  },{
+    path: '/login',
+    name: '/Login',
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/kelas',
+    name: '/Kelas',
+    component: () => import('../views/Kelas.vue')
+  },
+  
+  {
+    path: '/kelas/:id',
+    name: '/Kelas Detail',
+    component: () => import('../views/KelasDetail.vue')
   }
 ]
 
